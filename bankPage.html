@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <header>
+      <h1 class="text-5xl text-center mt-10 text-teal-500 font-semibold">
+        My Personal Bank
+      </h1>
+    </header>
+    <main>
+      <!-- money section -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 w-9/12 mx-auto mt-10">
+        <div class="bg-blue-200 p-5 text-teal-500 text-start rounded-xl">
+          <h1 class="text-3xl font-semibold">Deposit</h1>
+          <h2 class="text-5xl">$<span id="depositTotal">00</span> </h2>
+        </div>
+        <div class="bg-purple-200 p-5 text-teal-500 text-start rounded-xl">
+          <h1 class="text-3xl font-semibold" >Withdraw</h1>
+          <h2 class="text-5xl">$ <span id="withdraw-amount">50</span></h2>
+        </div>
+        <div class="bg-green-200 p-5 text-teal-500 text-start rounded-xl">
+          <h1 class="text-3xl font-semibold">Balance</h1>
+          <h2 class="text-5xl" >$ <span id="totalBalance">1200</span> </h2>
+        </div> 
+      </div>
+
+      <!-- deposit option -->
+
+      <div class="grid grid-cols-2 gap-7 mt-10 w-9/12 mx-auto">
+        <div class="bg-pink-300 p-7 rounded-xl space-y-5">
+          <h1>Deposit Amount</h1>
+          <input
+          id="depositAmount"
+            type="text"
+            class="block rounded-xl text-black p-4 w-9/12 mx-auto"
+            placeholder="$ amount you want to deposit"
+          />
+          <button
+            id="depositBtn"
+            class="bg-blue-400 p-3 rounded-xl text-white w-1/2"
+          >
+            Deposit
+          </button>
+        </div>
+        <div class="bg-pink-300 p-7 rounded-xl space-y-5">
+          <h1>Please Withdraw</h1>
+          <input
+          id="withdraw-money"
+            type="text"
+            class="block rounded-xl text-black p-4 w-9/12 mx-auto"
+            placeholder="$ amount you want to withdraw"
+          />
+          <button
+            id="withdrawBtn"
+            class="bg-blue-400 p-3 rounded-xl text-white w-1/2"
+          >
+            Withdraw
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="./js/bankPage.js"></script>
+  </body>
+</html>
